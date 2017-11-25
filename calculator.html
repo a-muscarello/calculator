@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			body {
+				background-color: gray;
+			}
+
+			.box {
+				background-color: #2b302d;
+				border-radius: 20px;
+				position: relative;
+				height: 400px;
+				width: 400px;
+				top: 70px;
+				left: 35%;
+				margin-top: 15px;
+			}
+			
+			.display {
+				left: 30px;
+				top: 20px;
+				position: relative;
+				width: 700px;
+				height: 115px;
+			}
+
+			.display input {
+				margin-left: 20px;
+				width: 350px; 
+				height: 70px;
+				font-size: 30px;
+			}
+
+			.button {
+				font-size: 40px;
+				height: 60px;
+				width: 60px;
+				border-radius: 15px;	
+				position: relative;
+				margin-left: 30px;
+			}
+
+			.button.sml {
+				color: #2c302e;
+			}
+
+			.button.grn {
+				background-color: #1d9b58;
+			}
+
+			.button.xtra {
+				background-color: #2e5491;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="box">
+		<form name="calc">
+		<table>
+			<tr class="display">
+				<td>
+					<input type="text" name="input">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" class="button sml" value="1" onclick="calc.input.value += '1'">
+					<input type="button" class="button sml" value="2" onclick="calc.input.value += '2'">
+					<input type="button" class="button sml" value="3" onclick="calc.input.value += '3'">
+					<input type="button"  class="button xtra" value="+" onclick="calc.input.value += '+'">
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<input type="button" class="button sml" value="4" onclick="calc.input.value += '4'">
+					<input type="button"  class="button sml" value="5" onclick="calc.input.value += '5'">
+					<input type="button" class="button sml" value="6" onclick="calc.input.value += '6'">
+					<input type="button" class="button xtra" value="-" onclick="calc.input.value += '-'">
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<input type="button" class="button sml" value="7" onclick="calc.input.value += '7'">
+					<input type="button" class="button sml" value="8" onclick="calc.input.value += '8'">
+					<input type="button" class="button sml" value="9" onclick="calc.input.value += '9'">
+					<input type="button" class="button xtra" value="*" onclick="calc.input.value += '*'">
+				</td>
+			</tr>
+
+			<tr>
+				<td>
+					<input type="button" class="button sml" value="0" onclick="calc.input.value += '0'">
+					<input type="button" class="button grn" value="C" onclick="calc.input.value = ''">
+					<input type="button" class="button grn" value="=" onclick="calc.input.value = eval(calc.input.value)">
+					<input type="button" class="button xtra" value="/" onclick="calc.input.value += '/'">
+				</td>
+			</tr>
+		</table>
+	
+		</div>
+		
+	</body>
+</html>
